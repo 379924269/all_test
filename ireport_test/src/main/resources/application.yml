@@ -1,0 +1,6 @@
+server:
+  port: 80
+  context-path: /test/
+logging:
+  path: /logs/
+  file: /logs/test.log
