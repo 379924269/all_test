@@ -12,12 +12,12 @@ import java.util.Date;
 public class Lang3Test {
 
     public static void main(String[] args) {
-        try {
-            Date date = DateUtils.parseDate("2014-01-10 10:10:10", "yyyy-MM-dd hh:mm:ss");
-            System.out.println(DateUtils.addDays(date, 2));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-
+        String newPwd = "21321aa";
+        int i = newPwd.matches(".*\\d+.*") ? 1 : 0;
+        int j = newPwd.matches(".*[a-zA-Z]+.*") ? 1 : 0;
+        int k = newPwd.matches(".*[~!@#$%^&*()_+|<>,.?/:;'\\[\\]{}\"]+.*") ? 1 : 0;
+        System.out.println("k = " + k);
+        System.out.println("j = " + j);
+        System.out.println("i = " + i);
     }
 }
