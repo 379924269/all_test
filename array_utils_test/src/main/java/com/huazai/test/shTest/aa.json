@@ -1,0 +1,29 @@
+[
+  {
+    "access_token": "21664d18-0819-4ad4-8b3b-ad49f0243268",
+    "token_type": "bearer",
+    "refresh_token": "60cfe15c-6767-4803-8ed7-266637bd4867",
+    "expires_in": 43199,
+    "scope": "server"
+  },
+  {
+    "access_token": "9ca2a17e-f7ec-4e58-b72c-9151d2f8be48",
+    "token_type": "bearer",
+    "refresh_token": "60cfe15c-6767-4803-8ed7-266637bd4867",
+    "expires_in": 43199,
+    "scope": "server"
+  },
+  {
+    "active": true,
+    "exp": 1548184339,
+    "user_name": "fzp",
+    "authorities": [
+      "ROLE_ADMIN",
+      "ROLE_USER"
+    ],
+    "client_id": "service-hi",
+    "scope": [
+      "server"
+    ]
+  }
+]

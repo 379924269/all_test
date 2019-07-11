@@ -1,0 +1,32 @@
+{
+  "result": true,
+  "users": [
+    {
+      "nickName": "测试用户6",
+      "mobile": "13320291743",
+      "rank": 3,
+      "remark": "",
+      "avatar": "",
+      "userName": "测试用户6",
+      "userId": 35
+    },
+    {
+      "nickName": "dnp1",
+      "mobile": "15923259771",
+      "rank": 3,
+      "remark": "",
+      "avatar": "",
+      "userName": "dnp1",
+      "userId": 36
+    },
+    {
+      "nickName": "测试用户20",
+      "mobile": "18725746503",
+      "rank": 3,
+      "remark": "",
+      "avatar": "",
+      "userName": "测试用户20",
+      "userId": 34
+    }
+  ]
+}

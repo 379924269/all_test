@@ -3,6 +3,7 @@ package com.huazai.test;
 import org.apache.commons.lang3.ArrayUtils;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +14,7 @@ import java.util.List;
  */
 public class IoTest {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         //File file = new File(".");
         //String filPath = file.getAbsolutePath();
         //
@@ -46,6 +47,12 @@ public class IoTest {
         //} catch (IOException e) {
         //    e.printStackTrace();
         //}
+        try {
+            File file = new File("D:/test");
+            file.createNewFile();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 

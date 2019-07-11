@@ -3,13 +3,13 @@ package com.huazai.test.util;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRMapCollectionDataSource;
 import net.sf.jasperreports.engine.export.HtmlExporter;
+import net.sf.jasperreports.engine.export.JRPdfExporter;
 import net.sf.jasperreports.engine.export.JRXlsExporter;
 import net.sf.jasperreports.engine.export.ooxml.JRDocxExporter;
 import net.sf.jasperreports.engine.util.JRLoader;
 import net.sf.jasperreports.export.SimpleExporterInput;
 import net.sf.jasperreports.export.SimpleHtmlExporterOutput;
 import net.sf.jasperreports.export.SimpleOutputStreamExporterOutput;
-import org.apache.commons.io.FilenameUtils;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
@@ -108,6 +108,10 @@ public class WebExportUtil {
             response.setHeader("content-disposition", "attachment;filename=" + URLEncoder.encode(fileName, "utf-8"));
             response.setContentType("application/pdf;charset=utf-8");
             JasperExportManager.exportReportToPdfStream(jasperPrint, response.getOutputStream());
+            JRPdfExporter jrPdfExporter = new JRPdfExporter();
+            jrPdfExporter.setExporterInput(new SimpleExporterInput(jasperPrint));
+            jrPdfExporter.setExporterOutput(new SimpleOutputStreamExporterOutput(response.getOutputStream()));
+            jrPdfExporter.exportReport();
             response.getOutputStream().flush();
         } finally {
             if (!response.isCommitted() && response.getOutputStream() != null)

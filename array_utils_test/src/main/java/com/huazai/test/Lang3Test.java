@@ -3,7 +3,7 @@ package com.huazai.test;
 import org.apache.commons.lang3.time.DateUtils;
 
 import java.text.ParseException;
-import java.util.Date;
+import java.util.*;
 
 /**
  * @author 华仔
@@ -12,12 +12,14 @@ import java.util.Date;
 public class Lang3Test {
 
     public static void main(String[] args) {
-        String newPwd = "21321aa";
-        int i = newPwd.matches(".*\\d+.*") ? 1 : 0;
-        int j = newPwd.matches(".*[a-zA-Z]+.*") ? 1 : 0;
-        int k = newPwd.matches(".*[~!@#$%^&*()_+|<>,.?/:;'\\[\\]{}\"]+.*") ? 1 : 0;
-        System.out.println("k = " + k);
-        System.out.println("j = " + j);
-        System.out.println("i = " + i);
+        Runnable r = new Runnable() {
+            public void run() {
+                for (int i = 0; i < 1000; i++) {
+                    System.out.println("i = " + i);
+                }
+            }
+        };
+
+        r.run();
     }
 }

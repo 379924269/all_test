@@ -12,8 +12,8 @@
         <module>array_utils_test</module>
         <module>uploae_file</module>
         <module>ireport_test</module>
-        <module>spring_security_test</module>
-        <module>math_test</module>
+        <module>http_test</module>
+        <module>all_util_collection</module>
     </modules>
 
 

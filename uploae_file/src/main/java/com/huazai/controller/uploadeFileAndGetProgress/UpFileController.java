@@ -48,7 +48,7 @@ public class UpFileController extends HttpServlet {
             ProgressSingleton.put(id + "Size", fileItem.getSize());
             //用流的方式读取文件，以便可以实时的获取进度
              in = fileItem.getInputStream();
-            File file = new File("D:/test");
+            File file = new File("D:/test/aa.exe");
             file.createNewFile();
              out = new FileOutputStream(file);
             byte[] buffer = new byte[4096];
